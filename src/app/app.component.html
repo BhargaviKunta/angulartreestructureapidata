@@ -1,0 +1,26 @@
+<div class="container">
+  <ul  *ngFor="let v of data.data;index as i" id="{{data.data[i].id}">
+    <div class="treeview w-20 border">
+      <h3 class="pt-3 pl-3 text-warning ">Tree Structure</h3>
+      <hr >
+      <ul class="mb-1 pl-3 pb-2">
+        <li><i class="fas fa-angle-right rotate"></i>
+          <span> <i class=" text-danger bg-danger far fa-envelope-open ic-w mx-1">{{data.data[i].refMenuId}}</i></span>
+          <ul class="nested">
+            <li><i class="far fa-bell ic-w mr-1 text-warning">{{data.data[i].name}}</i></li>
+            <li><i class="far fa-address-book ic-w mr-1">{{data.data[i].orderNum}}</i></li>
+            <li><i class="fas fa-angle-right rotate"></i>
+              <span><i class="far fa-calendar-alt ic-w mx-1 text-info">{{data.data[i].isActive}}</i></span>
+              <ul class="nested">
+                <li><i class="far fa-clock ic-w mr-1 text-sucess">{{data.data[i].objectName}}</i></li>
+              
+                <li><i class="fas fa-mug-hot ic-w mr-1"> {{data.data[i].endDate}}</i></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+  </ul>
+</div>
